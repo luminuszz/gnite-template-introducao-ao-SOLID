@@ -70,6 +70,8 @@ describe("[GET] /users/:user_id", () => {
       email: String(Math.random()),
     });
 
+    console.log("should be able to get user profile by ID User:", user);
+
     const response = await request(app).get(`/users/${user.id}`);
 
     const parsedResponse = {
